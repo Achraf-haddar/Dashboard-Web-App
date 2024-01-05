@@ -16,8 +16,6 @@ import { signIn, signOut, useSession } from "next-auth/react";
 import ThemeToggleButton from "@/components/ThemeToggleButton";
 import { useMediaQuery } from "@mui/material";
 
-const pages = ["Products", "Pricing", "Blog"];
-
 export type HeaderProps = {
   ColorModeContext: React.Context<{ toggleColorMode: () => void }>;
 };
@@ -51,7 +49,7 @@ const Header = (props: HeaderProps) => {
   const tabletCheck = useMediaQuery("(min-width: 768px)");
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" sx={{ marginBottom: "40px" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
@@ -101,13 +99,7 @@ const Header = (props: HeaderProps) => {
               sx={{
                 display: { xs: "block", md: "none" },
               }}
-            >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
+            ></Menu>
           </Box>
           <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
           <Typography
@@ -128,19 +120,8 @@ const Header = (props: HeaderProps) => {
           >
             DataSoft
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
-              >
-                {page}
-              </Button>
-            ))}
-          </Box>
           {tabletCheck && (
-            <Box sx={{ paddingRight: 5 }}>
+            <Box sx={{ paddingRight: 5, marginLeft: "auto" }}>
               <Typography>Signed in as {session?.user?.email}</Typography>
             </Box>
           )}
