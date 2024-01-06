@@ -12,9 +12,10 @@ export const authOptions: NextAuthOptions ={
                     access_type: 'offline',
                     response_type: 'code'
                 }
-            }
+            },
         }),
-    ]
+    ],
+    secret: process.env.NEXTAUTH_SECRET,  // Generated using the command "openssl rand -base64 32"
 }
 
 export default NextAuth(authOptions);
