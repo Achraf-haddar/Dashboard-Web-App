@@ -1,0 +1,29 @@
+.footer {
+    position: static;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin-top: 5rem;
+
+  }
+.footer ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    margin: auto;
+    width: 100%;
+}
+
+.footer li {
+    padding: 1rem;
+}
+
+.footer li a {
+    text-decoration: none;
+}
+
+.footer li a &:hover {
+    text-decoration: underline;
+}
