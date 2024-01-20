@@ -11,7 +11,18 @@ const ColorModeContext = React.createContext({
   toggleColorMode: () => {},
 });
 
-const App = ({ Component, pageProps: { session, ...pageProps } }) => {
+interface AppProps {
+  Component: React.ComponentType<any>; // Adjust this as per the actual props of your component
+  pageProps: {
+    session: any; // Replace 'any' with the actual type of 'session'
+    // Add other properties as needed
+  };
+}
+
+const App: React.FC<AppProps> = ({
+  Component,
+  pageProps: { session, ...pageProps },
+}) => {
   const [mode, setMode] = React.useState<"light" | "dark">("dark");
   const colorMode = React.useMemo(
     () => ({

@@ -86,21 +86,31 @@ const SideMenu = () => {
       className={styles.sideMenu}
       sx={{
         width: drawerWidth,
-        [`& .MuiDrawer-paper`]: {
-          left: 0,
-          top: mobileCheck ? 64 : 57,
-          flexShrink: 0,
-          whiteSpace: "nowrap",
-          boxSizing: "border-box",
-          ...(open && {
-            ...openedMixin(theme),
-            "& .MuiDrawer-paper": openedMixin(theme),
-          }),
-          ...(!open && {
-            ...closedMixin(theme),
-            "& .MuiDrawer-paper": closedMixin(theme),
+        "& .MuiDrawer-paper": {
+          ...(theme) => ({
+            left: 0,
+            top: mobileCheck ? 64 : 57,
+            flexShrink: 0,
+            whiteSpace: "nowrap",
+            boxSizing: "border-box",
+            ...(open ? openedMixin(theme) : closedMixin(theme)),
           }),
         },
+        // [`& .MuiDrawer-paper`]: {
+        //   left: 0,
+        //   top: mobileCheck ? 64 : 57,
+        //   flexShrink: 0,
+        //   whiteSpace: "nowrap",
+        //   boxSizing: "border-box",
+        //   ...(open && {
+        //     ...openedMixin(theme),
+        //     "& .MuiDrawer-paper": openedMixin(theme),
+        //   }),
+        //   ...(!open && {
+        //     ...closedMixin(theme),
+        //     "& .MuiDrawer-paper": closedMixin(theme),
+        //   }),
+        // },
       }}
     >
       <div className={styles.drawerHeader}>

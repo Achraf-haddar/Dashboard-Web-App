@@ -11,6 +11,7 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
+import { FormEvent } from "react";
 
 const Profile = () => {
   const { data: session } = useSession();
@@ -34,7 +35,7 @@ const Profile = () => {
     }));
   };
 
-  const handleSubmit = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     console.log(formData); // Submit form data to server here
   };

@@ -9,6 +9,7 @@ import {
   Switch,
   Typography,
 } from "@mui/material";
+import { FormEvent } from "react";
 
 const Settings = () => {
   const [showRevenue, setShowRevenue] = React.useState(true);
@@ -40,7 +41,7 @@ const Settings = () => {
     setShowCustomers(event.target.checked);
   };
 
-  const handleSubmit = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     // TODO: handle form submission
   };
