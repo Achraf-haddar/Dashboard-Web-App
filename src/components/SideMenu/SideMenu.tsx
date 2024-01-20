@@ -57,11 +57,11 @@ const menuListTranslations = [
   "Sign Out",
 ];
 const menuListIcons = [
-  <HomeIcon />,
-  <EqualizerIcon />,
-  <Person2Icon />,
-  <Settings />,
-  <ExitToAppIcon />,
+  <HomeIcon key="1" />,
+  <EqualizerIcon key="2" />,
+  <Person2Icon key="3" />,
+  <Settings key="4" />,
+  <ExitToAppIcon key="5" />,
 ];
 
 const SideMenu = () => {
