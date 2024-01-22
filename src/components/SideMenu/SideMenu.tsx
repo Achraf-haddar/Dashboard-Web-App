@@ -84,6 +84,7 @@ const SideMenu = () => {
       anchor="left"
       open={open}
       className={styles.sideMenu}
+      // @ts-ignore
       sx={
         {
           width: drawerWidth,
