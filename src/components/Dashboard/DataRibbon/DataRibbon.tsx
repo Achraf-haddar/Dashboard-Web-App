@@ -5,8 +5,8 @@ import styles from "./DataRibbon.module.css";
 
 const DataRibbon = () => {
   return (
-    <Grid container gap={2} className={styles.dataRibbon}>
-      <Grid>
+    <Grid container className={styles.dataRibbon}>
+      <Grid item xs={12} sm={6} md={3} lg={3}>
         <DataCard
           title={"Total Sales"}
           value={"462"}
@@ -15,14 +15,14 @@ const DataRibbon = () => {
           }
         />
       </Grid>
-      <Grid>
+      <Grid item xs={12} sm={6} md={3} lg={3}>
         <DataCard
           title={"Total Value"}
           value={"$25,732.53"}
           description={"The total sales of the current financial year"}
         />
       </Grid>
-      <Grid>
+      <Grid item xs={12} sm={6} md={3} lg={3}>
         <DataCard
           title={"Avg. Order Value"}
           value={"$159.30"}
@@ -31,7 +31,7 @@ const DataRibbon = () => {
           }
         />
       </Grid>
-      <Grid>
+      <Grid item xs={12} sm={6} md={3} lg={3}>
         <DataCard
           title={"Conversion rate"}
           value={"0.61%"}

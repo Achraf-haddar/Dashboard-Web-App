@@ -8,25 +8,25 @@ import styles from "./TransactionsBottomRow.module.css";
 const TransactionsBottomRow = () => {
   return (
     <Grid container className={styles.bottomRow}>
-      <Grid>
+      <Grid item xs={12} sm={6} md={3} lg={3}>
         <Paper className={styles.dataCard}>
           <p>Transactions per user type</p>
           <DataChart type={"doughnut"} data={doughnutChartData} />
         </Paper>
       </Grid>
-      <Grid>
+      <Grid item xs={12} sm={6} md={3} lg={3}>
         <Paper className={styles.dataCard}>
           <p>Transactions per user type</p>
           <DataChart type={"doughnut"} data={doughnutChartData} />
         </Paper>
       </Grid>
-      <Grid>
+      <Grid item xs={12} sm={6} md={3} lg={3}>
         <Paper className={styles.dataCard}>
           <p>Transactions per user type</p>
           <DataChart type={"doughnut"} data={doughnutChartData} />
         </Paper>
       </Grid>
-      <Grid>
+      <Grid item xs={12} sm={6} md={3} lg={3}>
         <Paper className={styles.dataCard}>
           <p>Transactions per user type</p>
           <DataChart type={"doughnut"} data={doughnutChartData} />
